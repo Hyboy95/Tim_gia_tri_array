@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input" placeholder="Input here">
+<button id="btn" onclick="check_array()">Kiểm tra</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+
+  function check_array() {
+    let result = document.getElementById('result');
+    let arr = [1, 2, 3, 3, 10, 20];
+    let m = document.getElementById('input').value;
+    let i = 0;
+
+    while (i < arr.length) {
+      if (m == arr[i]) {
+        n = i;
+        result.innerHTML += `Giá trị nhập vào trùng vị trí ${n} của mảng <br>`;
+      } else {
+        result.innerHTML = `Giá trị nhập vào không có trong mảng`;
+      }
+      i++;
+    }
+  }
+</script>
